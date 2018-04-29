@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Baseball Scoring App</string>
+
+    <string name="outText">Outs:</string>
+    <string name="strikeText">Strikes:</string>
+    <string name="ballsText">Balls:</string>
+    <string name="homeTeamText">Home Team</string>
+    <string name="guestTeamText">Guest Team</string>
+    <string name="addStrikeText">+ Strike</string>
+    <string name="addBallText">+ Ball</string>
+    <string name="addOutText">+ Out</string>
+    <string name="addSingleText">+ Single</string>
+    <string name="addHomeRunText">+ Home Run!</string>
+    <string name="resetGameText">Game Reset</string>
+    <string name="inningText">Inning</string>
+
+    <string name="stText">st</string>
+    <string name="ndText">nd</string>
+    <string name="rdText">rd</string>
+    <string name="thText">th</string>
+
+
+</resources>
