@@ -7,23 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
-    int homeScore = 0;
-    int guestScore = 0;
-    int currInning = 0; // 1-9 innings
+    int homeScore;
+    int guestScore;
+    int currInning; // 1-9 innings
     boolean currTeam = false; // false = guest team, and true = home team
 
-    int batterStrike = 0; // 0-3 strikes
-    int pitcherBall = 0; // 0-4 balls
-    int currOuts = 0; // 0-3 outs
-
-    // ArrayList<String> activityLog = new ArrayList<String>();  Phase 2 - track player history and add it to log and time stamp
+    int batterStrike; // 0-3 strikes
+    int pitcherBall; // 0-4 balls
+    int currOuts; // 0-3 outs
 
     boolean baseTracker[] = new boolean[3]; //track base positions 1-3
 
@@ -161,8 +156,6 @@ public class MainActivity extends AppCompatActivity {
 
             advancePlayerToFirst();
             pitcherBallText.setText(String.valueOf(pitcherBall));
-
-            //Toast.makeText(this, "first base: "+baseTracker[0]+ "\nSecond base: "+baseTracker[1]+ "\nThird base: "+baseTracker[2], Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -226,17 +219,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      *
-     * Phase 2 - advancePlayerToBase()
-     *
-     * This method will update advancePlayerToFirst() to accommodate doubles and triples
-     * consider using a for loop to traverse the baseTracker array
-     *
-     */
-
-    
-
-    /**
-     *
      * @param v
      */
     public void addScoreCurr(View v){ // Add a point to the current team
@@ -257,12 +239,6 @@ public class MainActivity extends AppCompatActivity {
 
         advancePlayerToFirst();
     }
-
-    // addDoubleRun() Phase 2 - Track Double Runs
-
-    // addTripleRun() Phase 2 - Track Triple Runs
-
-    // basesStolen Phase 2 - Track Stolen Bases
 
     /**
      *
@@ -308,8 +284,6 @@ public class MainActivity extends AppCompatActivity {
 
         guestScoreText.setText(String.valueOf(guestScore));
         homeScoreText.setText(String.valueOf(homeScore));
-
-        //Phase 2 - check to see which inning and whether to decide if you have a winning team
     }
 
     /**
